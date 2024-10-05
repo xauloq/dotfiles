@@ -80,6 +80,7 @@ static const char *prtscrcmd[] = { "flameshot", "gui", NULL};
 #include "movestack.c"
 static Key keys[] = {
 	/* modifier                     key        function        argument */
+	{ MODKEY, KX_Print, spawn, SHCMD("scrot" ~/screenshot/%Y-%m-%d-%T-screenshot.jpg)},
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
