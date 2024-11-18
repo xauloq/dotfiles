@@ -8,13 +8,13 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int splitstatus        = 1;        /* 1 for split status items */
 static const char *splitdelim        = ";";       /* Character used for separating status */
-static const char *fonts[]          = { "Hack:size=12", "Symbols Nerd Font:size=12" };
+static const char *fonts[]          = { "Agave Nerd Font:size=10" };
 static const char dmenufont[]       = "size=12";
-static const char col_gray3[]       = "#f1be9b"; 
-static const char col_gray1[]       = "#020914";
-static const char col_gray2[]       = "#a8856c";
-static const char col_gray4[]       = "#f1be9b"; 
-static const char col_cyan[]        = "#63576E";
+static const char col_gray3[]       = "#c1d1b2"; 
+static const char col_gray1[]       = "#0a1c11";
+static const char col_gray2[]       = "#2f4933";
+static const char col_gray4[]       = "#b3d9ac"; 
+static const char col_cyan[]        = "#105E26";
 
 static const unsigned int baralpha = 140;
 static const unsigned int borderalpha = 140;
@@ -80,7 +80,7 @@ static const char *prtscrcmd[] = { "flameshot", "gui", NULL};
 #include "movestack.c"
 static Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY, KX_Print, spawn, SHCMD("scrot" ~/screenshot/%Y-%m-%d-%T-screenshot.jpg)},
+  { MODKEY|ShiftMask, XK_s, spawn, SHCMD("flameshot gui")},
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
